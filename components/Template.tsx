@@ -176,7 +176,7 @@ export const Page: React.FunctionComponent<{ title?: string }> = ({ title, child
                     <meta name="title" content="Framer API" />
                     <meta name="description" content={description} />
                     <meta property="og:type" content="website" />
-                    <meta property="og:url" content="https://framer.com/api" />
+                    <meta property="og:url" content="https://framer.com/legacy/docs" />
                     <meta property="og:title" content={pageTitle} />
                     <meta property="og:description" content={description} />
                     <meta property="og:image" content={socialImage} />
@@ -186,7 +186,7 @@ export const Page: React.FunctionComponent<{ title?: string }> = ({ title, child
                     <meta name="twitter:title" content={pageTitle} />
                     <meta name="twitter:description" content={description} />
                     <meta name="twitter:image:src" content={socialImage} />
-                    <meta name="twitter:domain" content="https://framer.com/api" />
+                    <meta name="twitter:domain" content="https://framer.com/legacy/docs" />
 
                     {/* Tracking */}
                     <GoogleTag analyticsId="UA-37076997-17" />
