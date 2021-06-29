@@ -7,13 +7,13 @@
 The official [Framer Library][#framer-library] & [Framer Motion](#framer-motion) documentation. It’s
 a curated site that can pull in documentation from the [TSDoc][#tsdoc] comments in the project source.
 The foundation of the site is built on top of [Monobase][#monobase]. You can see the published
-website at [framer.com/api/][#website]
+website at [framer.com/legacy/api/][#website]
 
 [#framer-library]: https://www.npmjs.com/package/framer
 [#framer-motion]: https://www.framer.com/motion/
 [#tsdoc]: https://github.com/Microsoft/tsdoc
 [#monobase]: https://github.com/koenbok/monobase/
-[#website]: https://framer.com/api/
+[#website]: https://framer.com/legacy/api/
 
 <img src="https://misc.framerstatic.com/repos/api.png" />
 

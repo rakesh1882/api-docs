@@ -28,7 +28,7 @@ export const Template404: React.FunctionComponent<{ isMotion?: boolean }> = ({ i
             <Center className="error-message">
                 <MarkdownStyles>
                     <h2>Oops! Page not found.</h2>
-                    <InlineButton href={isMotion ? "/api/motion/" : "/api/"} style={{ marginTop: 15 }}>
+                    <InlineButton href={isMotion ? "/legacy/api/motion/" : "/legacy/api/"} style={{ marginTop: 15 }}>
                         Back Home
                     </InlineButton>
                 </MarkdownStyles>

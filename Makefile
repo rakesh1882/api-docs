@@ -50,7 +50,7 @@ test: bootstrap
 
 .PHONY: dev
 dev: bootstrap data changelog
-	@$(dotenv) -- $(monobase) serve --project=. --prefix=/api
+	@$(dotenv) -- $(monobase) serve --project=. --prefix=/legacy/api
 
 .PHONY: serve
 serve: dev
@@ -67,9 +67,9 @@ verify-api-references:
 .PHONY: publish
 publish: bootstrap data changelog
 	# Using /api for framer.com
-	@$(dotenv) -- $(monobase) build --project=. --path=build --prefix=/api
-	@$(node) ./model/linkify.ts build/api/**/*.html
-	@$(cpy) '$(BUILD_DIR)/api/404.html' $(BUILD_DIR)
+	@$(dotenv) -- $(monobase) build --project=. --path=build --prefix=/legacy/api
+	@$(node) ./model/linkify.ts build/legacy/api/**/*.html
+	@$(cpy) '$(BUILD_DIR)/legacy/api/404.html' $(BUILD_DIR)
 
 .PHONY: publish-search
 publish-search:

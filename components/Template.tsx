@@ -145,13 +145,12 @@ export const Page: React.FunctionComponent<{ title?: string; showEdit?: boolean 
     // Use path gives the page name
     if (showEdit === undefined) {
         showEdit =
-            usePath() !== "/api/" &&
-            usePath() !== "" &&
-            usePath() !== "/api/tutorial/" &&
-            usePath() !== "/" &&
-            usePath() !== "/tutorial" &&
-            usePath() !== "/api/motion/" &&
-            usePath() !== "/motion"
+            usePath() !== "/legacy/api/" &&
+            usePath() !== "/legacy/api/tutorial/" &&
+            usePath() !== "/legacy" &&
+            usePath() !== "/legacy/tutorial" &&
+            usePath() !== "/legacy/api/motion/" &&
+            usePath() !== "/legacy/motion"
     }
 
     // All page UI must go in this variable for <StyledSheet> to pick them up.

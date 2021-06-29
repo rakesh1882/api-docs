@@ -4,7 +4,7 @@ import { chromium } from "playwright-chromium"
 import algoliasearch from "algoliasearch"
 import { isProduction } from "../utils/isProduction"
 
-const PATH = "./build/api"
+const PATH = "./build/legacy/api"
 const LIBRARY_URL = "/"
 const MOTION_URL = "/motion/"
 
@@ -66,9 +66,9 @@ const parseAPI = async (files: string[] = []) => {
             }
 
             const getPageURL = (file: string) => {
-                const page = file.replace("./build/api/", "").replace("index.html", "")
+                const page = file.replace("./build/legacy/api/", "").replace("index.html", "")
 
-                return `/api/${page}`
+                return `/legacy/api/${page}`
             }
 
             const getPageLibrary = (file: string) => {
