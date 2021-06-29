@@ -124,13 +124,7 @@ export const Template = (title: string): React.FunctionComponent => ({ children 
 )
 
 /** Base HTML markup for the page. */
-export const Page: React.FunctionComponent<{ title?: string; showEdit?: boolean }> = ({
-    title,
-    children,
-    showEdit,
-}) => {
-    // Use context gives the file path
-    const path = "https://github.com/framer/api-docs/edit/master/" + useContext().path
+export const Page: React.FunctionComponent<{ title?: string }> = ({ title, children }) => {
     let pageTitle = isMotion() ? `Framer Motion API` : `Framer API`
     if (title) {
         pageTitle += ` | ${title}`
@@ -142,29 +136,12 @@ export const Page: React.FunctionComponent<{ title?: string; showEdit?: boolean 
         ? "https://framer.com/static/images/social/motion.png"
         : "https://misc.framerstatic.com/api/social.png"
 
-    // Use path gives the page name
-    if (showEdit === undefined) {
-        showEdit =
-            usePath() !== "/legacy/api/" &&
-            usePath() !== "/legacy/api/tutorial/" &&
-            usePath() !== "/legacy" &&
-            usePath() !== "/legacy/tutorial" &&
-            usePath() !== "/legacy/api/motion/" &&
-            usePath() !== "/legacy/motion"
-    }
-
     // All page UI must go in this variable for <StyledSheet> to pick them up.
     const body = (
         <Body>
             <Main className="wrapper">
                 <Sidebar />
                 <Search />
-
-                {showEdit ? (
-                    <EditButton target="_blank" rel="noopener" href={path}>
-                        Edit Page
-                    </EditButton>
-                ) : null}
 
                 {children}
             </Main>

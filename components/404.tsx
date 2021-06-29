@@ -23,7 +23,7 @@ const Stack = styled.div`
 `
 
 export const Template404: React.FunctionComponent<{ isMotion?: boolean }> = ({ isMotion = false }) => (
-    <Page showEdit={false}>
+    <Page>
         <Grid className="four-o-four">
             <Center className="error-message">
                 <MarkdownStyles>
