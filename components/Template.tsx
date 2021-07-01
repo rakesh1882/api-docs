@@ -175,6 +175,7 @@ export const Page: React.FunctionComponent<{ title?: string }> = ({ title, child
                     {/* Meta Tags */}
                     <meta name="title" content="Framer API" />
                     <meta name="description" content={description} />
+                    <meta name="robots" content="noindex" />
                     <meta property="og:type" content="website" />
                     <meta property="og:url" content="https://framer.com/legacy/docs" />
                     <meta property="og:title" content={pageTitle} />
